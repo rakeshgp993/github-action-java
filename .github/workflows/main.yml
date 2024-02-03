@@ -16,8 +16,8 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v4.0.0
         with:
-          java-version: 17
-          distribution: jdk
+          java-version: '11'
+          distribution: 'jre'
     # The package type (jdk, jre, jdk+fx, jre+fx)
       # - name: Setup Java
       #   uses: Fleshgrinder/setup-java@1.0.0
