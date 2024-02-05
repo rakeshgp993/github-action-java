@@ -31,20 +31,12 @@ jobs:
         run: |
           cd /home/runner/work/github-action-java/github-action-java/java-project
           mvn clean install -Drakesh-test=rakesh-test
-        
-  #     # - name: dotnet publish
-  #     #   run: dotnet publish Phoenix.Web -c Release -o ${{env.DOTNET_ROOT}}/myapp
-  #     - name: Java Maven release
-  #     # You may pin to the exact commit or the version.
-  #     # uses: qcastel/github-actions-maven-release@88522b1841bc65c43d7040c15b0ac0867c2fa7ea
-  #       uses: qcastel/github-actions-maven-release@v1.12.31
-  #       with:
-  #         release-branch-name: master
-  #     # - name: Upload artifact for deployment job
-  #     #   uses: actions/upload-artifact@v2
-  #     #   with:
-  #     #     name: .net-app
-  #     #     path: ${{env.DOTNET_ROOT}}/myapp
+          
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: rak-artifact  # Name for the artifact
+          path: target/*.jar  # Path to the JAR file or any other artifacts you want to publish
 
   #     - name: Upload GitHub Pages artifact
   #       uses: actions/upload-pages-artifact@v3.0.0
