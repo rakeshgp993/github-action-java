@@ -27,11 +27,11 @@ jobs:
   #     - name: Build with dotnet
   #       run: dotnet build Phoenix.Web --configuration Release
 
-  #     - name: Apache Maven Build Automation for Java Project
-  #       uses: NishkarshRaj/Maven_Actions@0.1
-  #       with:
-  #         # Apache Maven hierarchy to be followed in src/main/java/{pkg name} for source code
-  #         src: src/main/java/com/microsoft/demo/Demo.java
+      - name: Apache Maven Build Automation for Java Project
+        uses: NishkarshRaj/Maven_Actions@0.1
+        with:
+          # Apache Maven hierarchy to be followed in src/main/java/{pkg name} for source code
+          src: src/main/java/com/microsoft/demo/Demo.java
 
   #     # - name: dotnet publish
   #     #   run: dotnet publish Phoenix.Web -c Release -o ${{env.DOTNET_ROOT}}/myapp
