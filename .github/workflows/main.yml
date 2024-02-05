@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: rak-artifact  # Name for the artifact
-          path: target/*.jar  # Path to the JAR file or any other artifacts you want to publish
+          path: /home/runner/.m2/repository/helloworld/helloworld/1.0-SNAPSHOT/helloworld-1.0-SNAPSHOT.war  # Path to the JAR file or any other artifacts you want to publish
 
   #     - name: Upload GitHub Pages artifact
   #       uses: actions/upload-pages-artifact@v3.0.0
