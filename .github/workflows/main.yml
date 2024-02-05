@@ -38,15 +38,6 @@ jobs:
           name: rak-artifact  # Name for the artifact
           path: /home/runner/.m2/repository/helloworld/helloworld/1.0-SNAPSHOT/helloworld-1.0-SNAPSHOT.war  # Path to the JAR file or any other artifacts you want to publish
 
-  #     - name: Upload GitHub Pages artifact
-  #       uses: actions/upload-pages-artifact@v3.0.0
-  #       with:
-  #         # Artifact name
-  #         name: java-app #  optional, default is github-pages
-  #         # Path of the directory containing the static assets.
-  #         path: _site/ # default is _site/
-
-
   deploy:
       name: Deploy
       needs: build
@@ -63,7 +54,7 @@ jobs:
         - name: Deploy to GitHub Pages
           uses: peaceiris/actions-gh-pages@v3
           with:
-            github_token: ${{ secrets.TOKEN }}
+            github_token: ${{ secrets.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 }}
             publish_dir: /home/runner/.m2/repository/helloworld/helloworld/1.0-SNAPSHOT/helloworld-1.0-SNAPSHOT.war
 
   # deploy:
