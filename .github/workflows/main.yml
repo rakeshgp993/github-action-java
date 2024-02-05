@@ -31,12 +31,6 @@ jobs:
         run: |
           cd /home/runner/work/github-action-java/github-action-java/java-project
           mvn clean install -Drakesh-test=rakesh-test
-
-    - name: Build with Maven
-      run: |
-        cd your_project_directory  # Change to the correct directory where your pom.xml is located
-        mvn clean install -Drakesh-test=rakesh-test
-
         
   #     # - name: dotnet publish
   #     #   run: dotnet publish Phoenix.Web -c Release -o ${{env.DOTNET_ROOT}}/myapp
