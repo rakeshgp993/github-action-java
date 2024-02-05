@@ -39,7 +39,7 @@ jobs:
         uses: kobi-lemberg/github-maven-step@java8_new
         with:
     # Command to run
-          command: mvn 
+          command: clean install 
     # artifactory realese username variable name
           artifactory-release-username-variable: rakesh-test
     # artifactory realese username variable value
