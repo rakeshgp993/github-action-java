@@ -47,24 +47,24 @@ jobs:
   #         path: _site/ # default is _site/
 
 
-  # deploy:
-  #     name: Deploy
-  #     needs: build
-  #     runs-on: ubuntu-latest
-  #     if: github.ref == 'refs/heads/master'
+  deploy:
+      name: Deploy
+      needs: build
+      runs-on: ubuntu-latest
+      if: github.ref == 'refs/heads/master'
    
-  #     steps:
-  #       - name: Download artifact
-  #         uses: actions/download-artifact@v2
-  #         with:
-  #           name: java-app
-  #           path: _site/
+      steps:
+        - name: Download artifact
+          uses: actions/download-artifact@v2
+          with:
+            name: rak-artifact
+            path: _site/
    
-  #       - name: Deploy to GitHub Pages
-  #         uses: peaceiris/actions-gh-pages@v3
-  #         with:
-  #           github_token: ${{ secrets.TOKEN }}
-  #           publish_dir: _site/
+        - name: Deploy to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.TOKEN }}
+            publish_dir: /home/runner/.m2/repository/helloworld/helloworld/1.0-SNAPSHOT/helloworld-1.0-SNAPSHOT.war
 
   # deploy:
   #   runs-on: ubuntu-latest
