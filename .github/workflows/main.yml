@@ -54,7 +54,7 @@ jobs:
         - name: Deploy to GitHub Pages
           uses: peaceiris/actions-gh-pages@v3
           with:
-            github_token: ${{ secrets.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 }}
+            github_token: ${{ secrets.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 }}
             publish_dir: /home/runner/.m2/repository/helloworld/helloworld/1.0-SNAPSHOT/helloworld-1.0-SNAPSHOT.war
 
   # deploy:
